@@ -32,9 +32,6 @@ class Field:
     def update_field(self) -> None:
         """
         アイテムを配置、プレイヤーを配置、フィールドを更新
-
-        Returns:
-            list[list[str]]: 更新されたフィールド
         
         Examples:
             >>>
