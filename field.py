@@ -1,7 +1,4 @@
-from item import Item
 from player improt Player
-from enemy import Enemy
-from food import Food
 from block import Block
 
 
@@ -13,26 +10,17 @@ class Field:
     Attributes:
         field_size (int): フィールドのサイズ
         players (list[Player]): プレイヤーの情報リスト
-        enemies (list[Enemy]): 敵の情報リスト
-        blocks (list[Block]): 壁の情報
-        foods (list[Food])
         field (list[list[str]])
     """
     def _init_(self, 
                field_size: int, 
-               players: list[Player], 
-               enemies: list[Enemy], 
-               blocks: list[Block], 
-               foods: list[Food]) -> None:
+               players: list[Player]) -> None:
         """"
         初期化関数
 
         Args:
             field_size (double): フィールドのサイズ
-            foods (list[Food]): 落ちてるアイテムの情報リスト
             players (list[Player]): プレイヤーの情報リスト
-            enemies (list[Enemy]): 敵の情報リスト
-            Block (list[Block]): 壁の情報リスト
         """
     
     def update_field(self) -> list[str]:
