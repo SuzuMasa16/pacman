@@ -1,29 +1,35 @@
-from player improt Player
-from block import Block
+from player import Player
 
 
 class Field:
-    """
-    ゲームのフィールドのためのクラス
-    フィールドの更新と衝突判定
+    """Fieldクラス
+    Fieldクラスは、ゲームのフィールドを表すクラスです。
+    プレイヤー、敵、アイテムの位置を更新し、Fieldを表示する機能を持ちます。
+    位置を更新する際に衝突判定を行います。
 
     Attributes:
-        field_size (int): フィールドのサイズ
-        players (list[Player]): プレイヤーの情報リスト
-        field (list[list[str]])
+        players (list[Player]): プレイヤーのリスト
+        enemies (list[Enemy]): 敵のリスト
+        foods (list[Food]]): アイテムのリスト
+        blocks (list[Block]): アイテムのリスト
+        field (list[list[str]]): フィールドの情報
+        f_size (int): フィールドのサイズ
     """
-    def _init_(self, 
-               field_size: int, 
+
+    def _init_(self,
+               field_size: int,
                players: list[Player]) -> None:
         """"
         初期化関数
 
         Args:
             field_size (double): フィールドのサイズ
-            players (list[Player]): プレイヤーの情報リスト
+            players (list[Player]): プレイヤーのリスト
         """
-    
-    def update_field(self) -> list[str]:
+
+        pass
+
+    def update_field(self) -> None:
         """
         アイテムを配置、プレイヤーを配置、フィールドを更新
 
@@ -33,26 +39,17 @@ class Field:
         Examples:
             >>>
         """
-    
-    def display_field(self) -> list[list[str]]:
+        pass
+
+    def display_field(self) -> None:
         """
         フィールドを表示
 
         Returns:
             None
-        
-        Examples:
-            >>>
-        """
-    
-    def update_colision(self, target: Item, items: list[Item]) -> Item | None:
-        """
-        衝突を判定する
-
-        Returns:
-            衝突してなければNone:
-            衝突していれば衝突したアイテムを返す
 
         Examples:
             >>>
         """
+
+        pass
