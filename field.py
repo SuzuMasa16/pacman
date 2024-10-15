@@ -16,7 +16,7 @@ class Field:
         f_size (int): フィールドのサイズ
     """
 
-    def _init_(self, field_size: int, players: list[Player]) -> None:
+    def __init__(self, field_size: int, players: list[Player]) -> None:
         """"
         初期化関数
 
@@ -25,18 +25,39 @@ class Field:
             players (list[Player]): プレイヤーのリスト
         """
 
+        self.field_size = field_size
+        self.players = players
+        self.field = [[" "for _ in range(field_size)]
+                      for _ in range(field_size)]
         pass
 
-    def update_field(self) -> None:
+    def update_field(self) -> list[list[str]]:
         """
         アイテムを配置、プレイヤーを配置、フィールドを更新
 
         Returns:
 
+
         Examples:
-            >>>
+            >>> p = [1]
+            >>> field = Field(2, p)
+            >>> field.update_field()
+            [['p', ' '], [' ', ' ']]
         """
+
+        for i in range(self.field_size):
+            for j in range(self.field_size):
+                self.field[i][j] = " "
+
+        for player in self.players:
+            self.field[0][0] = "p"
+
+        return self.field
+
         pass
+        for player in self.players:
+            if player.status:
+                self.field[player.next_x][player.next_y] = player.icon
 
     def display_field(self) -> None:
         """
@@ -50,3 +71,8 @@ class Field:
         """
 
         pass
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
