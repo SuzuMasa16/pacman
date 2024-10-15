@@ -16,9 +16,7 @@ class Field:
         f_size (int): フィールドのサイズ
     """
 
-    def _init_(self,
-               field_size: int,
-               players: list[Player]) -> None:
+    def _init_(self, field_size: int, players: list[Player]) -> None:
         """"
         初期化関数
 
@@ -34,7 +32,7 @@ class Field:
         アイテムを配置、プレイヤーを配置、フィールドを更新
 
         Returns:
-        
+
         Examples:
             >>>
         """
