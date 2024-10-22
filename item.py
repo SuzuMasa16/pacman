@@ -2,6 +2,7 @@
 
 """
 
+
 class Item:
     """block,player,enemy,foodの親クラス
 
@@ -13,7 +14,9 @@ class Item:
        //status(bool) : アイテムの状態（Trueなら存在する、Falseなら存在しない消滅した）
        icon(str) : 表示されるアイテムのアイコン
     """
+
     def __init__(self, x, y) -> None:
+        pass
         """
         Itemクラスのコンストラクタ
         引数にx座標とy座標を受け取り、それぞれの座標を初期化する
@@ -23,7 +26,12 @@ class Item:
 
         Returns:
             None
-        """   
+        """
+        self.now_x = x  # 現在のx座標
+        self.now_y = y  # 現在のy座標
+        self.next_x = x  # 次の時刻でのx座標
+        self.next_y = y  # 次の時刻でのy座標
+
     def get_next_pos(self) -> tuple[int, int]:
         """
         次の時刻の座標を取得するメソッド
@@ -37,6 +45,8 @@ class Item:
             >>> item.get_next_pos()
             (2, 3)
         """
+        return (self.now_x, self.now_y)
+        pass
 
     def get_pos(self) -> tuple[int, int]:
         """
@@ -51,7 +61,8 @@ class Item:
             >>> item.get_pos()
             (2, 3)
         """
-
+        return (self.now_x, self.now_y)
+        pass
 
     def update_pos(self, stuck: bool = False) -> None:
         """
@@ -75,5 +86,12 @@ class Item:
             (3, 4)
 
         """
-    
+        self.now_x = self.next_x
+        self.now_y = self.next_y
 
+        pass
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
