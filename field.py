@@ -29,6 +29,7 @@ class Field:
         self.players = players
         self.field = [[" "for _ in range(field_size)]
                       for _ in range(field_size)]
+        self.update_field()
         pass
 
     def update_field(self) -> list[list[str]]:
@@ -39,25 +40,20 @@ class Field:
 
 
         Examples:
-            >>> p = [1]
+            >>> p = [Player(0,1)]
             >>> field = Field(2, p)
             >>> field.update_field()
-            [['p', ' '], [' ', ' ']]
+            [[' ', '😶'], [' ', ' ']]
         """
 
-        for i in range(self.field_size):
+        for i in range(self.field_size):  # 一旦すべてを空に
             for j in range(self.field_size):
                 self.field[i][j] = " "
 
         for player in self.players:
-            self.field[0][0] = "p"
+            self.field[player.next_x][player.next_y] = player.icon
 
         return self.field
-
-        pass
-        for player in self.players:
-            if player.status:
-                self.field[player.next_x][player.next_y] = player.icon
 
     def display_field(self) -> None:
         """
@@ -67,8 +63,19 @@ class Field:
             None
 
         Examples:
-            >>>
+            >>> p=[Player(0,1)]
+            >>> f = Field(2,p)
+            >>> f.display_field()
+             😶
+            <BLANKLINE>
         """
+
+        max_width = max(len(row) for row in self.field)
+
+        for row in self.field:
+            row_str = "".join(row)
+            row_str = row_str.ljust(max_width)
+            print(row_str)
 
         pass
 
