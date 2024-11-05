@@ -16,6 +16,7 @@ class Player(Item):
         self.next_y(int) : 次の時刻でのy座標
         self.status(bool) : アイテムの状態（Trueなら存在する、Falseなら存在しない消滅した）
     """
+    
     def __init__(self, x, y) -> None:
         pass
 
