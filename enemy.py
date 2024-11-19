@@ -29,7 +29,6 @@ class enemy(Item):
         現在のプレイヤーの座標から次に移動したい座標を[num1,num2]で決めて戻り値として出力する.
 
         Args:
-            
 
         Returns:
             tuple[int, int]: 次に移動したい座標(例:入力が(1,0)で現在のプレイヤーの座標が
@@ -45,9 +44,9 @@ class enemy(Item):
 
         """
 
-        num1=random.randint(-1,1)
-        num2=random.randint(-1,1)
-        dir=(num1,num2)
+        num1 = random.randint(-1, 1)
+        num2 = random.randint(-1, 1)
+        dir = (num1, num2)
         self.next_x = self.now_x + dir[0]
         self.next_y = self.now_y + dir[1]
         return (self.next_x, self.next_y)

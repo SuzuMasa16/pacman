@@ -16,9 +16,8 @@ class Player(Item):
         self.next_y(int) : 次の時刻でのy座標
         self.status(bool) : アイテムの状態（Trueなら存在する、Falseなら存在しない消滅した）
     """
-    
+
     def __init__(self, x, y) -> None:
-        pass
 
         super().__init__(x, y)
         self.icon = "😶"
@@ -49,7 +48,6 @@ class Player(Item):
         self.next_x = self.now_x + dir[0]
         self.next_y = self.now_y + dir[1]
         return (self.next_x, self.next_y)
-        pass
 
 
 if __name__ == "__main__":
