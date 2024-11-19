@@ -1,5 +1,6 @@
 from input_without_enter import InputWithoutEnter
 
+
 class UserInput:
     """ユーザーの入力を受け取るクラス"""
 
@@ -13,11 +14,11 @@ class UserInput:
         key = InputWithoutEnter.input_without_enter()
         # 入力されたキーに対応する座標の差分を返す
         if key == "w":
-            return (0, 1)
+            return (0, -1)
         elif key == "a":
             return (-1, 0)
         elif key == "s":
-            return (0, -1)
+            return (0, 1)
         elif key == "d":
             return (1, 0)
         else:
