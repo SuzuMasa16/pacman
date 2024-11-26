@@ -25,7 +25,7 @@ class Game:
         """
 
         self.players: list[Player] = []
-        self.field = None
+        self.field: Field
         self.setup(params)
         self.start()
 
