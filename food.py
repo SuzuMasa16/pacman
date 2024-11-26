@@ -1,7 +1,7 @@
 from item import Item
 
 
-class food(Item):
+class Food(Item):
     """フードクラス
     Itemを継承して作成したフードクラス
     初期座標をrandomで決めるメゾット

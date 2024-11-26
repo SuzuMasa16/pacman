@@ -2,7 +2,7 @@ from item import Item
 import random
 
 
-class enemy(Item):
+class Enemy(Item):
     """ エネミークラス
     Itemを継承して作成したエネミークラス.
     入力を受け取ってランダムな方向に移動したときの」計算するメソッドと

@@ -11,15 +11,16 @@ class UserInput:
             tuple[int, int]: x, y座標の差分 (例: (1, 0)、(-1, 0)、(0, 1)、(0, -1))など)
         """
         # キー入力を受け取る
-        key = InputWithoutEnter.input_without_enter()
+        IWE = InputWithoutEnter()
+        key = IWE.input_without_enter()
         # 入力されたキーに対応する座標の差分を返す
         if key == "w":
-            return (0, -1)
-        elif key == "a":
             return (-1, 0)
+        elif key == "a":
+            return (0, -1)
         elif key == "s":
-            return (0, 1)
-        elif key == "d":
             return (1, 0)
+        elif key == "d":
+            return (0, 1)
         else:
             return (0, 0)

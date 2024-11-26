@@ -1,6 +1,5 @@
 from player import Player
 
-
 class Field:
     """Fieldクラス
     Fieldクラスは、ゲームのフィールドを表すクラスです。

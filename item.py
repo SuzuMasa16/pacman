@@ -11,7 +11,7 @@ class Item:
        now_y(int) : 現在のy座標
        next_x(int) : 次の時刻でのx座標
        next_y(int) : 次の時刻でのy座標
-       //status(bool) : アイテムの状態（Trueなら存在する、Falseなら存在しない消滅した）
+       status(bool) : アイテムの状態（Trueなら存在する、Falseなら存在しない消滅した）
        icon(str) : 表示されるアイテムのアイコン
     """
 
@@ -83,6 +83,10 @@ class Item:
             (3, 4)
 
         """
+        if stuck:
+            self.next_x = self.now_x
+            self.next_y = self.now_y
+            return
         self.now_x = self.next_x
         self.now_y = self.next_y
 
