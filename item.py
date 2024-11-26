@@ -16,7 +16,6 @@ class Item:
     """
 
     def __init__(self, x, y) -> None:
-        pass
         """
         Itemクラスのコンストラクタ
         引数にx座標とy座標を受け取り、それぞれの座標を初期化する
@@ -46,7 +45,6 @@ class Item:
             (2, 3)
         """
         return (self.now_x, self.now_y)
-        pass
 
     def get_pos(self) -> tuple[int, int]:
         """
@@ -62,7 +60,6 @@ class Item:
             (2, 3)
         """
         return (self.now_x, self.now_y)
-        pass
 
     def update_pos(self, stuck: bool = False) -> None:
         """
@@ -88,8 +85,6 @@ class Item:
         """
         self.now_x = self.next_x
         self.now_y = self.next_y
-
-        pass
 
 
 if __name__ == "__main__":
